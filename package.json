@@ -11,6 +11,11 @@
     "preview": "vite preview",
     "prepare": "husky"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
   "lint-staged": {
     "*.ts": [
       "eslint --fix"
