@@ -3,21 +3,6 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-export const viteConfig = {
-  plugins: [
-    {
-      name: 'vite-plugin-example',
-      transform(code, id) {
-        if (id.endsWith('.ts') || id.endsWith('.tsx')) {
-          // Example transformation
-          return code.replaceAll('console.log', 'console.warn');
-        }
-        return code;
-      },
-    },
-  ],
-};
-
 function App() {
   const [count, setCount] = useState(0);
 
