@@ -45,12 +45,20 @@ export default defineConfig([
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'prettier/prettier': 'warn',
-      'unicorn/prevent-abbreviations': 'warn',
+      'unicorn/prevent-abbreviations': 'off',
       'unicorn/filename-case': 'off',
+      'unicorn/prefer-logical-operator-over-ternary': 'off',
+      'unicorn/prefer-module': 'off',
+      'unicorn/no-null': 'off',
       'sonarjs/no-unused-vars': 'off',
+      'sonarjs/prefer-read-only-props': 'off',
+      '@typescript-eslint/no-require-imports': 'off',
     },
     settings: {
       react: { version: 'detect' },
+    },
+    parserOptions: {
+      project: 'tsconfig.json',
     },
   },
 ]);
