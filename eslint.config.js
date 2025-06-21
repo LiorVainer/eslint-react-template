@@ -13,7 +13,7 @@ import importPlugin from 'eslint-plugin-import';
 import sonarjs from 'eslint-plugin-sonarjs';
 import promise from 'eslint-plugin-promise';
 
-/** @type {import("eslint").FlatConfig[]} */
+// /** @type {import("eslint").FlatConfig[]} */
 export default defineConfig([
   { ignores: ['dist'] },
   js.configs.recommended,
@@ -34,7 +34,7 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
-        project: 'tsconfig.json',
+        project: 'tsconfig.app.json',
       },
     },
     plugins: {
