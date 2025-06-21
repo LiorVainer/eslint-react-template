@@ -1,4 +1,3 @@
-// eslint.config.js
 import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 import globals from 'globals';
@@ -35,6 +34,7 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
+        project: 'tsconfig.json',
       },
     },
     plugins: {
@@ -56,9 +56,6 @@ export default defineConfig([
     },
     settings: {
       react: { version: 'detect' },
-    },
-    parserOptions: {
-      project: 'tsconfig.json',
     },
   },
 ]);
